@@ -11,8 +11,8 @@ def run():
     # model.check_data()
     print('creating model..')
     model.build()
-    # print('starting training..')
-    # model.train()
+    print('starting training..')
+    model.train()
     print('eval results:')
     model.evaluate()
 

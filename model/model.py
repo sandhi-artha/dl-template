@@ -80,6 +80,8 @@ class MyCNN(BaseModel):
         for i in range(16):
             ax = f.add_subplot(4,4,i+1)
             ax.imshow(image[i])
-            ax.set_title(f'pred: {predictions[i]}, true: {label[i]}')
+            pred = np.argmax(predictions[i])
+            conf = np.max(predictions[i])
+            ax.set_title(f'pred: {pred} (conf:{conf:.2f}), true: {label[i]}')
             
         plt.show()
