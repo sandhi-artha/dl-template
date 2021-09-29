@@ -85,3 +85,8 @@ class MyCNN(BaseModel):
             ax.set_title(f'pred: {pred} (conf:{conf:.2f}), true: {label[i]}')
             
         plt.show()
+
+class UNet(BaseModel):
+    '''unet model class'''
+    def __init__(self, config):
+        super().__init__(config)
